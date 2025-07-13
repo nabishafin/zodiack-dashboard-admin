@@ -27,7 +27,7 @@ const sidebarItems = [
     icon: LayoutDashboard,
   },
   {
-    title: "Users",
+    title: "All Users",
     href: "/dashboard/users",
     icon: Users2,
   },
