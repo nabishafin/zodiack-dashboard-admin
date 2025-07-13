@@ -31,12 +31,10 @@ export default function DashboardHeader() {
           <div>
             <h1 className="text-lg sm:text-xl font-semibold">
               <span className="hidden sm:inline font-bold text-3xl">
-                Well Come to Dance Attix!!!
+                Well Come to group mate!!!
               </span>
             </h1>
-            <h2 className="mt-2 text-sm">
-              Buy. Sell. Refresh your style, effortlessly today. !!!
-            </h2>
+            <h2 className="mt-2 text-sm">"Get more trip to learn more !!!"</h2>
           </div>
         </div>
 
