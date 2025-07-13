@@ -11,6 +11,7 @@ import {
   ChevronDown,
   Menu,
   Music,
+  Crown,
 } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
@@ -30,6 +31,11 @@ const sidebarItems = [
     title: "All Users",
     href: "/dashboard/users",
     icon: Users2,
+  },
+  {
+    title: "License",
+    href: "/dashboard/license",
+    icon: Crown,
   },
   {
     title: "Settings",
@@ -64,7 +70,6 @@ const sidebarItems = [
     icon: LogOut,
   },
 ];
-
 // Logo Section
 function LogoSection() {
   return (

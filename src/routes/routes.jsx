@@ -21,6 +21,7 @@ import AboutUs from "../pages/dashboardpages/about/AboutUs";
 import EditAbout from "../pages/dashboardpages/about/EditAbout";
 import AllNotifications from "../pages/dashboardpages/notification/AllNotifications";
 import AllUsers from "../pages/dashboardpages/user/AllUsers";
+import License from "@/pages/dashboardpages/license/License";
 
 const routes = createBrowserRouter([
   {
@@ -50,6 +51,7 @@ const routes = createBrowserRouter([
       { index: true, element: <DashboardOverview /> },
       { path: "notificatons", element: <AllNotifications /> },
       { path: "users", element: <AllUsers /> },
+      { path: "license", element: <License /> },
 
       // Settings
       { path: "settings/profile", element: <Profile /> },
