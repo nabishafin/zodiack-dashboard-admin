@@ -22,6 +22,7 @@ import EditAbout from "../pages/dashboardpages/about/EditAbout";
 import AllNotifications from "../pages/dashboardpages/notification/AllNotifications";
 import AllUsers from "../pages/dashboardpages/user/AllUsers";
 import License from "@/pages/dashboardpages/license/License";
+import ChangePassword from "@/pages/auth/ChangePassword";
 
 const routes = createBrowserRouter([
   {
@@ -56,6 +57,7 @@ const routes = createBrowserRouter([
       // Settings
       { path: "settings/profile", element: <Profile /> },
       { path: "settings/editpersonal", element: <EditProfile /> },
+      { path: "settings/changepassword", element: <ChangePassword /> },
       { path: "settings/terms", element: <TermsAndConditions /> },
       { path: "settings/editterms", element: <EditTermsAndConditions /> },
       { path: "settings/privacy", element: <PrivacyPolicy /> },
