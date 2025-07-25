@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom"; // 👈 Import useNavigate
 import { Eye, EyeOff } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -11,12 +12,22 @@ import { Link } from "react-router-dom";
 const SignInPage = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(false);
+  const navigate = useNavigate(); // 👈 Initialize navigate
+
+  // 👇 Handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // You can add authentication logic here (e.g., API call)
+    // For now, just navigate to dashboard
+    navigate("/dashboard");
+  };
 
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4 ">
       <div className="w-full max-w-5xl flex items-center justify-center gap-20">
         {/* Logo Section */}
-        <div className="hidden lg:flex items-center justify-center flex-1  pr-5 ">
+        <div className="hidden lg:flex items-center justify-center flex-1 pr-5">
           <img src={logo} alt="" />
         </div>
 
@@ -29,7 +40,9 @@ const SignInPage = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
-              <form className="space-y-4">
+              <form className="space-y-4" onSubmit={handleSubmit}>
+                {" "}
+                {/* 👈 Add onSubmit */}
                 {/* Username/Email Field */}
                 <div className="space-y-2">
                   <Label
@@ -45,7 +58,6 @@ const SignInPage = () => {
                     className="h-11 border-gray-300 focus:border-red-900 focus:ring-red-900"
                   />
                 </div>
-
                 {/* Password Field */}
                 <div className="space-y-2">
                   <Label
@@ -74,7 +86,6 @@ const SignInPage = () => {
                     </button>
                   </div>
                 </div>
-
                 {/* Remember Me and Forgot Password */}
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">
@@ -100,7 +111,6 @@ const SignInPage = () => {
                     </button>
                   </Link>
                 </div>
-
                 {/* Sign In Button */}
                 <Button
                   type="submit"
